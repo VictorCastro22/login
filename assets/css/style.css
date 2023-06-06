@@ -1,6 +1,7 @@
+/* Importar fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
-/** Variables - colors **/
+/** Variáveis - cores **/
 :root {
     /* Light */
     --color-light-50: #f8fafc;
@@ -17,9 +18,8 @@
     /* Gradient */
     --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100));
 }
-/*    background-image: linear-gradient(to right, rgb(20, 220, 63), rgb(17, 71, 51));
-*/
-/* General */
+
+/* Geral */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -41,10 +41,10 @@
     flex-direction: column;
     height: fit-content;
     background-color: var(--color-light-50);
-    padding: 30px 40px;
-    border-radius: 8px;
-    gap: 30px;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    padding: 3.125vw 5vw;
+    border-radius: 0.5em;
+    gap: 3.125vw;
+    box-shadow: 0.625vw 0.625vw 1vw rgba(0, 0, 0, 0.336);
     animation: dark-to-light-background 0.3s ease-in-out;
 }
 
@@ -56,7 +56,7 @@
 }
 
 #form_header h1 {
-    font-size: 40px;
+    font-size: 2.5vw;
     position: relative;
 }
 
@@ -64,15 +64,15 @@
     position: absolute;
     content: '';
     width: 40%;
-    height: 3px;
+    height: 0.1875vw;
     background-color: var(--color-purple-50);
-    bottom: 10px;
-    border-radius: 5px;
+    bottom: 0.3125em;
+    border-radius: 0.3125em;
 }
 
 #mode_icon {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.25vw;
 }
 
 /* Social Media */
@@ -82,7 +82,7 @@
 }
 
 #social_media img {
-    width: 100px;
+    width: 15.625vw;
 }
 
 #social_media img:hover {
@@ -95,35 +95,35 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5625vw;
 }
 
 .input-box>label {
-    font-size: 14px;
+    font-size: 0.875em;
     color: var(--color-dark-50);
 }
 
 .input-field {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 3px;
-    border-bottom: 1px solid var(--color-purple-50);
+    gap: 0.9375vw;
+    padding: 0.1875vw;
+    border-bottom: 0.03125vw solid var(--color-purple-50);
     cursor: text;
 }
 
 .input-field i {
-    font-size: 18px;
+    font-size: 1.125vw;
     cursor: text;
     color: var(--color-dark-900);
 } 
 
 .input-field input {
     border: none;
-    width: 260px;
+    width: 16.25vw;
     background-color: transparent;
-    font-size: 18px;
-    padding: 0px 5px;
+    font-size: 1.125vw;
+    padding: 0em 0.3125vw;
 }
 
 .input-field input:focus {
@@ -134,7 +134,7 @@
 #forgot_password a {
     text-decoration: none;
     color: var(--color-dark-50);
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 #forgot_password a:hover {
@@ -145,11 +145,11 @@
 #login_button {
     border: none;
     background: var(--color-gradient);
-    padding: 7px;
-    border-radius: 3px;
+    padding: 0.4375vw;
+    border-radius: 0.1875em;
     color: var(--color-light-50);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125vw;
     cursor: pointer;
 }
 
@@ -171,18 +171,31 @@
 
 @keyframes dark-to-light-background {
     0% {
-        background-color:var(--color-dark-100);
+        background-color: var(--color-dark-100);
     }
-    100.0% {
-        background-color:var(--color-light-50);
+    100% {
+        background-color: var(--color-light-50);
     }
 }
 
 @keyframes light-to-dark-background {
     0% {
-        background-color:var(--color-light-50);
+        background-color: var(--color-light-50);
     }
-    100.0% {
-        background-color:var(--color-dark-100); 
+    100% {
+        background-color: var(--color-dark-100); 
     }
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    /* Estilos específicos para telas menores ou iguais a 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos específicos para telas entre 601px e 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+    /* Estilos específicos para telas maiores que 1024px */
 }
