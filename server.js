@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
 app.get('/users', (req, res) => {
-    res.json({
+    // Certifique-se de que o conteúdo retornado é um JSON válido
+    const users = {
         "usuario": {
             "password": "senha",
             "dashboard": "/dashboard/usuario"
@@ -20,8 +21,12 @@ app.get('/users', (req, res) => {
             "dashboard": "/dashboard/annacaroline"
         }
         // Adicione outros usuários conforme necessário
-    });
+    };
+
+    console.log('Users:', users);
+    res.json(users);
 });
+
 
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
