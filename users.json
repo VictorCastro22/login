@@ -1,0 +1,10 @@
+{
+    "usuario": {
+        "password": "senha",
+        "dashboard": "/dashboard/usuario"
+    },
+    "annacaroline": {
+        "password": "10012005",
+        "dashboard": "/dashboard/annacaroline"
+    }
+}
