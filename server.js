@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'assets')));
 
-// Adicione esta rota para lidar com solicitações de login
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     const users = {
