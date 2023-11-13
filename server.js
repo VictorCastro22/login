@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
@@ -8,6 +9,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'assets')));
+app.use(cors());
 
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
