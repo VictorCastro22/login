@@ -41,7 +41,7 @@ app.post('/login', (req, res) => {
     } else {
         res.status(999).json({ success: false, req: req });
     }
-});
+}, {mode: 'no-cors'});
 
 // Ajuste da rota /dashboard/:username
 app.get('/dashboard/:username', (req, res) => {
