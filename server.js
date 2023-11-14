@@ -8,8 +8,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 const corsOptions = {
     origin: 'https://login-pearl-chi.vercel.app',
-    optionsSuccessStatus: 200
-};
+    methods: 'POST, GET',
+    allowedHeaders: '*',
+    maxAge: 86400,
+  };
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'assets')));
