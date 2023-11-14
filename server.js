@@ -6,10 +6,14 @@ const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const corsOptions = {
+    origin: 'https://login-pearl-chi.vercel.app',
+    optionsSuccessStatus: 200
+};
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(cors());
+app.use(cors(corsOptions));
 app.options('*', cors());
 
 app.post('/login', (req, res) => {
