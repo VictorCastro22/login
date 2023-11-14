@@ -13,7 +13,7 @@ app.use(cors());
 app.options('*', cors());
 
 const allowCrossDomain = (req, res, next) => {
-    res.header(`Access-Control-Allow-Origin`, `https://login-pearl-chi.vercel.app`);
+    res.header(`Access-Control-Allow-Origin`, `login-hsbh444wq-victorcastro22.vercel.app`);
     res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
     res.header(`Access-Control-Allow-Headers`, `Content-Type`);
     next();
@@ -65,7 +65,5 @@ app.get('/login', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on https://login-pearl-chi.vercel.app:${port}`);
+    console.log(`Server is running on login-hsbh444wq-victorcastro22.vercel.app:${port}`);
 });
-
-console.log(port);
