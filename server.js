@@ -13,7 +13,7 @@ app.use(cors());
 app.options('*', cors());
 
 const allowCrossDomain = (req, res, next) => {
-    res.header(`Access-Control-Allow-Origin`, `login-hsbh444wq-victorcastro22.vercel.app`);
+    res.header(`Access-Control-Allow-Origin`, `https://login-hsbh444wq-victorcastro22.vercel.app`);
     res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
     res.header(`Access-Control-Allow-Headers`, `Content-Type`);
     next();
