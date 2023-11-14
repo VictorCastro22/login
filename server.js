@@ -28,7 +28,7 @@ app.post('/login', (req, res) => {
             "dashboard": "/dashboard/annacaroline"
         }
     };
-
+    console.log(res);
     if (users[username] && users[username].password === password) {
         res.json({ success: true, redirect: users[username].dashboard });
     } else {
