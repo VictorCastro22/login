@@ -26,7 +26,7 @@ loginForm.addEventListener('submit', (event) => {
     const password = document.getElementById('password').value;
 
     // Fazer a solicitação POST para o servidor
-    fetch('http://localhost:3000/login', {
+    fetch('https://login-pearl-chi.vercel.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
