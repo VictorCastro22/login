@@ -21,7 +21,7 @@ app.post('/login', (req, res) => {
     const users = {
         "usuario": {
             "password": "senha",
-            "dashboard": "/dashboard/usuario"
+            "dashboard": "views/dashboard/usuario.html"
         },
         "annacaroline": {
             "password": "10012005",
@@ -31,7 +31,7 @@ app.post('/login', (req, res) => {
     if (users[username] && users[username].password === password) {
         res.json({ success: true, redirect: users[username].dashboard });
     } else {
-        res.json({ success: false, req: req });
+        res.status(999).json({ success: false, req: req });
     }
 });
 
@@ -53,5 +53,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running onhttps://login-pearl-chi.vercel.app:${port}`);
 });
