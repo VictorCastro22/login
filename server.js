@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 app.options('*', cors());
 
 const allowCrossDomain = (req, res, next) => {
-    res.header(`Access-Control-Allow-Origin`, `example.com`);
+    res.header(`Access-Control-Allow-Origin`, `https://login-pearl-chi.vercel.app`);
     res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
     res.header(`Access-Control-Allow-Headers`, `Content-Type`);
     next();
