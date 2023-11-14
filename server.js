@@ -6,16 +6,10 @@ const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const corsOptions = {
-    origin: 'https://login-pearl-chi.vercel.app',
-    methods: 'POST, GET',
-    allowedHeaders: '*',
-    maxAge: 86400,
-  };
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(cors(corsOptions));
+app.use(cors());
 app.options('*', cors());
 
 const allowCrossDomain = (req, res, next) => {
@@ -71,5 +65,7 @@ app.get('/login', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running onhttps://login-pearl-chi.vercel.app:${port}`);
+    console.log(`Server is running on https://login-pearl-chi.vercel.app:${port}`);
 });
+
+console.log(port);
